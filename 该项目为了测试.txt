@@ -1,4 +1,4 @@
-����ĿΪ�˲���eclipse����git�ύ��git bash�ύ�Ĳ�ͬ������
+该项目为了测试eclipse集成git提交与git bash提交的不同步问题
 ----------------------------------------------------------
 $code/test (master)
 $ git add .
@@ -7,7 +7,7 @@ $code/test (master)
 $ git commit -a -m 'add readme'
 [master (root-commit) ab25e56] add readme
  1 files changed, 1 insertions(+), 0 deletions(-)
- create mode 100644 ����ĿΪ�˲���.txt
+ create mode 100644 该项目为了测试.txt
 warning: Your console font probably doesn't support Unicode. If you experience s
 trange characters in the output, consider switching to a TrueType font such as L
 ucida Console!
@@ -25,6 +25,30 @@ To git@github.com:spssclm/test.git
 $code/test (master)
 $ gitk
 
-�鿴comment��ɶ��û��ֻ�ǳ�ʼ��һ���⡣
+查看comment里啥都没有只是初始化一个库。
 --------------------------------------
-���ύһ������
+再提交一次试试
+
+$code/test (master)
+$ git add .
+
+$code/test (master)
+$ git commit -a -m 'change readme'
+[master 9494817] change readme
+ 1 files changed, 30 insertions(+), 1 deletions(-)
+ rewrite 该项目为了测试.txt (100%)
+warning: Your console font probably doesn't support Unicode. If you experience s
+trange characters in the output, consider switching to a TrueType font such as L
+ucida Console!
+
+$code/test (master)
+$ git push origin master
+Counting objects: 5, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 824 bytes, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To git@github.com:spssclm/test.git
+   ab25e56..9494817  master -> master
+--------------------------------------
+看到了，文件内容编码改为utf8再提交试试
