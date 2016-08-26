@@ -1,0 +1,1 @@
+该项目为了测试eclipse集成git提交与git bash提交的不同步问题
