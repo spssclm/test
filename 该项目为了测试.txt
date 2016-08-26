@@ -1,1 +1,30 @@
 该项目为了测试eclipse集成git提交与git bash提交的不同步问题
+----------------------------------------------------------
+$code/test (master)
+$ git add .
+
+$code/test (master)
+$ git commit -a -m 'add readme'
+[master (root-commit) ab25e56] add readme
+ 1 files changed, 1 insertions(+), 0 deletions(-)
+ create mode 100644 该项目为了测试.txt
+warning: Your console font probably doesn't support Unicode. If you experience s
+trange characters in the output, consider switching to a TrueType font such as L
+ucida Console!
+
+$code/test (master)
+$ git push origin master
+Counting objects: 3, done.
+Delta compression using up to 4 threads.
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 290 bytes, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To git@github.com:spssclm/test.git
+ * [new branch]      master -> master
+
+$code/test (master)
+$ gitk
+
+查看comment里啥都没有只是初始化一个库。
+--------------------------------------
+再提交一次试试
